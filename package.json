@@ -5,10 +5,13 @@
   "bin": {
     "itp": "./main.js"
   },
-  "keywords": ["cli", "image"],
+  "keywords": [
+    "cli",
+    "image"
+  ],
   "author": "WhyK",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^2.4.2",
     "images-to-pdf": "^1.0.3"
   }
