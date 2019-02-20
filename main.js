@@ -17,7 +17,7 @@ const helpCmd = () => {
   const cmdName = chalk.yellow(Object.keys(pkg.bin));
   console.log(`
   Usage:
-    1. ${cmdName} path/to/file
+    1. ${cmdName} path/to/file pdf_name
     2. ${cmdName} Command
 
     ${chalk.red('file extension limitation: png, jpg')}
