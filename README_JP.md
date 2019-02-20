@@ -3,7 +3,7 @@
 PDFの生成には"[image-to-pdf](https://github.com/mLuby/images-to-pdf)"を使用しています。
 
 ## 使い方
-1. itp path/to/file pdf_name
-2. itp Command
+1. `itp path/to/file pdf_name`
+2. `itp Command`
 
 拡張子はpngとjpgに制限されています。
