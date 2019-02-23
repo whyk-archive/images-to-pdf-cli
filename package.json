@@ -1,6 +1,6 @@
 {
   "name": "image-to-pdf-cli",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Convert images to PDF with CLI",
   "bin": {
     "itp": "./main.js"
