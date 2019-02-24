@@ -3,6 +3,12 @@
 PDFの生成には"[image-to-pdf](https://github.com/mLuby/images-to-pdf)"を使用しています。
 
 ## 使い方
+### インストール
+```
+npm i -g git+https://github.com/windchime-yk/image-to-pdf-cli#master
+```
+
+### PDFを生成する
 1. `itp path/to/file pdf_name`
 2. `itp Command`
 
