@@ -7,7 +7,7 @@ const path = require('path');
 const pkg = require('./package.json');
 
 const argv = process.argv;
-const baseDir = path.join(__dirname, argv[2]);
+const baseDir = path.join(process.cwd(), argv[2]);
 const generateName = argv[3];
 
 const versionCmd = () => {
