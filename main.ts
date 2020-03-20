@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const imageToPdf = require('images-to-pdf');
-const fs = require('fs');
-const chalk = require('chalk');
-const path = require('path');
-const pkg = require('./package.json');
+import imageToPdf from 'images-to-pdf';
+import fs from 'fs';
+import chalk from 'chalk';
+import path from 'path';
+import pkg from './package.json';
 
 const argv = process.argv;
 const baseDir = path.join(process.cwd(), argv[2]);
@@ -28,7 +28,7 @@ const helpCmd = () => {
   `);
 }
 const mainCmd = () => {
-  fs.readdir(baseDir, (err, files) => {
+  fs.readdir(baseDir, (_, files) => {
     const filterImg = files.filter(file => file.includes('.png') || file.includes('.jpg'));
     let fullPathImg = [];
     filterImg.forEach((img, index) => {

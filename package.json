@@ -18,6 +18,7 @@
   "author": "WhyK",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^13.9.2",
     "chalk": "^2.4.2",
     "images-to-pdf": "^1.0.3"
   }
