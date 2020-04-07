@@ -2,8 +2,12 @@
   "name": "images-to-pdf-cli",
   "version": "1.0.0",
   "description": "Convert images to PDF with CLI",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "build": "tsc src/main.ts --outDir dist/"
+  },
   "bin": {
-    "itp": "./main.js"
+    "itp": "./dist/main.js"
   },
   "files": [
     "main.js",
@@ -20,6 +24,10 @@
   "dependencies": {
     "@types/node": "^13.9.2",
     "chalk": "^2.4.2",
-    "images-to-pdf": "^1.0.3"
+    "images-to-pdf": "^1.0.3",
+    "ts-node": "^8.8.1"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
   }
 }

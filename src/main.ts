@@ -4,17 +4,18 @@ import imageToPdf from 'images-to-pdf';
 import fs from 'fs';
 import chalk from 'chalk';
 import path from 'path';
-import pkg from './package.json';
+import pkg from '../package.json';
 
-const argv = process.argv;
-const baseDir = path.join(process.cwd(), argv[2]);
-const generateName = argv[3];
+const [,,secondArg, generateName] = process.argv;
+const baseDir: string = path.join(process.cwd(), secondArg);
 
 const versionCmd = () => {
   console.log(`v${pkg.version}`);
 }
 const helpCmd = () => {
-  const cmdName = chalk.yellow(Object.keys(pkg.bin));
+  console.log(pkg.bin);
+
+  const cmdName = chalk.yellow('itp');
   console.log(`
   Usage:
     1. ${cmdName} path/to/file pdf_name
@@ -30,7 +31,7 @@ const helpCmd = () => {
 const mainCmd = () => {
   fs.readdir(baseDir, (_, files) => {
     const filterImg = files.filter(file => file.includes('.png') || file.includes('.jpg'));
-    let fullPathImg = [];
+    let fullPathImg: string[] = [];
     filterImg.forEach((img, index) => {
       const pageNum = index + 1;
       fullPathImg.push(`${baseDir}${img}`);
@@ -41,7 +42,7 @@ const mainCmd = () => {
   });
 }
 
-switch (argv[2]) {
+switch (secondArg) {
   case '-v' || '--version':
     versionCmd();
     break;
