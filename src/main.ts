@@ -42,14 +42,6 @@ const mainCmd = () => {
   });
 }
 
-switch (secondArg) {
-  case '-v' || '--version':
-    versionCmd();
-    break;
-  case '-h' || '--help':
-    helpCmd();
-    break;
-  default:
-    mainCmd();
-    break;
-}
+if (['-v', '--version'].includes(secondArg)) versionCmd()
+else if(['-h', '--help'].includes(secondArg)) helpCmd()
+else mainCmd()
